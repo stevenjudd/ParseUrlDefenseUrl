@@ -1,28 +1,28 @@
-function Get-OriginalUrlFromUrlDefense {
+function Get-UrlDefenseUrl {
     <#
     .SYNOPSIS
         Extract the imbedded URL from a URL Defense link
     .DESCRIPTION
         This function will return the imbedded URL that is inside a URL from a URL 
-        Defense link. This makes it easier to read the destination link and also to 
-        potentially load and test the URL if desired.
+        Defense link from https://urldefense.com. This makes it easier to read the 
+        destination link and also to potentially load and test the URL if desired.
     .EXAMPLE
-        Get-OriginalUrlFromUrlDefense -Url "https://urldefense.com/v3/__https://t.co/BrOGv72PZ7__;!!J9_hdUX_JbjuLQ!67QG1zGLFo7NvDdC5tW1T3DSGOZHBbnJqQqa9kG7cDf5rF24BRdLa-KeVFQrgss$"
+        Get-UrlDefenseUrl -Url "https://urldefense.com/v3/__https://t.co/BrOGv72PZ7__;!!J9_hdUX_JbjuLQ!67QG1zGLFo7NvDdC5tW1T3DSGOZHBbnJqQqa9kG7cDf5rF24BRdLa-KeVFQrgss$"
         This command will return the imbedded URL from the specified value for the Url parameter.
     .EXAMPLE
         $Url = "https://urldefense.com/v3/__https://t.co/BrOGv72PZ7__;!!J9_hdUX_JbjuLQ!67QG1zGLFo7NvDdC5tW1T3DSGOZHBbnJqQqa9kG7cDf5rF24BRdLa-KeVFQrgss$"
-        $Url | Get-OriginalUrlFromUrlDefense
+        $Url | Get-UrlDefenseUrl
         This command is setting the URL value to the $Url variable. This variable is 
         passed via the pipeline to the function and will return the imbedded URL.
     .EXAMPLE
-        Get-OriginalUrlFromUrlDefense -Url ""
+        Get-UrlDefenseUrl -Url ""
         This command will return an error since the Url parameter value is empty.
     .EXAMPLE
-        Get-OriginalUrlFromUrlDefense "blah"
+        Get-UrlDefenseUrl "blah"
         This command will return an error since the Url parameter value does not conform
         to the urldefense format.
     .EXAMPLE
-        Get-OriginalUrlFromUrlDefense Get-Clipboard
+        Get-UrlDefenseUrl Get-Clipboard
         This command will run the function against whatever is in the clipboard. This is
         useful if you use the "Copy Hyerlink" feature of Outlook to get the URL to test.
     .INPUTS
@@ -36,6 +36,7 @@ function Get-OriginalUrlFromUrlDefense {
             Set the Url parameter to an array
             Added the begin,process,end blocks to properly handle pipeline input
             Added the "urldefense.com" check to the Select-String RegEx and used capture groups to get just the URL
+        Updated by Steven Judd on 2020/03/15 to shorten the function name
     #>
 
     param (
@@ -72,9 +73,9 @@ function Get-OriginalUrlFromUrlDefense {
 } #end Get-sjUrlFromUrlDefense function
 
 # test cases:
-# Get-OriginalUrlFromUrlDefense
-# Get-OriginalUrlFromUrlDefense -Url "https://urldefense.com/v3/__https://t.co/BrOGv72PZ7__;!!J9_hdUX_JbjuLQ!67QG1zGLFo7NvDdC5tW1T3DSGOZHBbnJqQqa9kG7cDf5rF24BRdLa-KeVFQrgss$"
+# Get-UrlDefenseUrl
+# Get-UrlDefenseUrl -Url "https://urldefense.com/v3/__https://t.co/BrOGv72PZ7__;!!J9_hdUX_JbjuLQ!67QG1zGLFo7NvDdC5tW1T3DSGOZHBbnJqQqa9kG7cDf5rF24BRdLa-KeVFQrgss$"
 # $Url = "https://urldefense.com/v3/__https://t.co/BrOGv72PZ7__;!!J9_hdUX_JbjuLQ!67QG1zGLFo7NvDdC5tW1T3DSGOZHBbnJqQqa9kG7cDf5rF24BRdLa-KeVFQrgss$"
-# $Url | Get-OriginalUrlFromUrlDefense
-# Get-OriginalUrlFromUrlDefense -Url ""
-# Get-OriginalUrlFromUrlDefense "blah"
+# $Url | Get-UrlDefenseUrl
+# Get-UrlDefenseUrl -Url ""
+# Get-UrlDefenseUrl "blah"

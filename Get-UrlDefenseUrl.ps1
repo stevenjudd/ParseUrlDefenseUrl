@@ -33,7 +33,8 @@ function Get-UrlDefenseUrl {
 
         Now, after copying the UrlDefense URL to the clipboard, run "furl" to expand the
         url, output it to the console for visible examination, and copy it to the
-        clipboard for pasting into a browser or another tool.
+        clipboard for pasting into a browser or another tool. (Note that this is not
+        using an approved verb to keep the command as short as reasonable.)
     .INPUTS
         System.String
     .OUTPUTS

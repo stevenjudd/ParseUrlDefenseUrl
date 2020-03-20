@@ -22,9 +22,18 @@ function Get-UrlDefenseUrl {
         This command will return an error since the Url parameter value does not conform
         to the urldefense format.
     .EXAMPLE
-        Get-UrlDefenseUrl Get-Clipboard
+        Get-UrlDefenseUrl (Get-Clipboard)
         This command will run the function against whatever is in the clipboard. This is
         useful if you use the "Copy Hyerlink" feature of Outlook to get the URL to test.
+
+        If you want to get fancy (of course you do) then you can run the following code
+        to create a function to shortcut the above command:
+
+        function furl {Get-UrlDefenseUrl -Url (Get-Clipboard) | Tee-Object -Variable $url;$url | Set-Clipboard}
+
+        Now, after copying the UrlDefense URL to the clipboard run "furl" to expand the
+        url, output it to the console for visible examination, and copy it to the
+        clipboard for pasting into a browser or another tool.
     .INPUTS
         System.String
     .OUTPUTS

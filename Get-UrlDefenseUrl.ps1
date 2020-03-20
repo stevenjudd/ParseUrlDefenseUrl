@@ -29,9 +29,9 @@ function Get-UrlDefenseUrl {
         If you want to get fancy (of course you do) then you can run the following code
         to create a function to shortcut the above command:
 
-        function furl {Get-UrlDefenseUrl -Url (Get-Clipboard) | Tee-Object -Variable $url;$url | Set-Clipboard}
+        function furl {Get-UrlDefenseUrl -Url (Get-Clipboard) | Tee-Object -Variable url ; $url | Set-Clipboard}
 
-        Now, after copying the UrlDefense URL to the clipboard run "furl" to expand the
+        Now, after copying the UrlDefense URL to the clipboard, run "furl" to expand the
         url, output it to the console for visible examination, and copy it to the
         clipboard for pasting into a browser or another tool.
     .INPUTS

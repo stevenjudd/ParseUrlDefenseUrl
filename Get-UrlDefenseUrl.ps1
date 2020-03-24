@@ -27,7 +27,7 @@ function Get-UrlDefenseUrl {
         useful if you use the "Copy Hyerlink" feature of Outlook to get the URL to test.
 
         If you want to get fancy (of course you do) then you can run the following code
-        to create a function to shortcut the above command:
+        to create a function to shortcut the above command plus a bit more:
 
         function furl {Get-UrlDefenseUrl -Url (Get-Clipboard) | Tee-Object -Variable url ; $url | Set-Clipboard}
 

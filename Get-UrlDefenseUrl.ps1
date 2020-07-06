@@ -7,10 +7,10 @@ function Get-UrlDefenseUrl {
         Defense link from https://urldefense.com. This makes it easier to read the 
         destination link and also to potentially load and test the URL if desired.
     .EXAMPLE
-        Get-UrlDefenseUrl -Url "https://urldefense.com/v3/__https://t.co/BrOGv72PZ7__;!!J9_hdUX_JbjuLQ!67QG1zGLFo7NvDdC5tW1T3DSGOZHBbnJqQqa9kG7cDf5rF24BRdLa-KeVFQrgss$"
+        Get-UrlDefenseUrl -Url "https://urldefense.com/v3/__https://github.com/steven__judd/sjUrlDefense__;!!J9_hdUX_JbjuLQ!_mpQgRsIaawOILsUWxCcr5y3kFNhQir7iT8vEvcJzL8J4OfrN2b3ichHNbkMj4c$"
         This command will return the imbedded URL from the specified value for the Url parameter.
     .EXAMPLE
-        $Url = "https://urldefense.com/v3/__https://t.co/BrOGv72PZ7__;!!J9_hdUX_JbjuLQ!67QG1zGLFo7NvDdC5tW1T3DSGOZHBbnJqQqa9kG7cDf5rF24BRdLa-KeVFQrgss$"
+        $Url = "https://urldefense.com/v3/__https://github.com/steven__judd/sjUrlDefense__;!!J9_hdUX_JbjuLQ!_mpQgRsIaawOILsUWxCcr5y3kFNhQir7iT8vEvcJzL8J4OfrN2b3ichHNbkMj4c$"
         $Url | Get-UrlDefenseUrl
         This command is setting the URL value to the $Url variable. This variable is 
         passed via the pipeline to the function and will return the imbedded URL.
@@ -84,8 +84,8 @@ function Get-UrlDefenseUrl {
 
 # test cases:
 # Get-UrlDefenseUrl
-# Get-UrlDefenseUrl -Url "https://urldefense.com/v3/__https://t.co/BrOGv72PZ7__;!!J9_hdUX_JbjuLQ!67QG1zGLFo7NvDdC5tW1T3DSGOZHBbnJqQqa9kG7cDf5rF24BRdLa-KeVFQrgss$"
-# $Url = "https://urldefense.com/v3/__https://t.co/BrOGv72PZ7__;!!J9_hdUX_JbjuLQ!67QG1zGLFo7NvDdC5tW1T3DSGOZHBbnJqQqa9kG7cDf5rF24BRdLa-KeVFQrgss$"
+# Get-UrlDefenseUrl -Url "https://urldefense.com/v3/__https://github.com/steven__judd/sjUrlDefense__;!!J9_hdUX_JbjuLQ!_mpQgRsIaawOILsUWxCcr5y3kFNhQir7iT8vEvcJzL8J4OfrN2b3ichHNbkMj4c$"
+# $Url = "https://urldefense.com/v3/__https://github.com/steven__judd/sjUrlDefense__;!!J9_hdUX_JbjuLQ!_mpQgRsIaawOILsUWxCcr5y3kFNhQir7iT8vEvcJzL8J4OfrN2b3ichHNbkMj4c$"
 # $Url | Get-UrlDefenseUrl
 # Get-UrlDefenseUrl -Url ""
 # Get-UrlDefenseUrl "blah"

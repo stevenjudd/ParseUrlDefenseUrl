@@ -24,6 +24,6 @@ function Get-OriginalUrlFromUrlDefense {
 
 # examples:
 # Get-OriginalUrlFromUrlDefense
-# Get-OriginalUrlFromUrlDefense -Url "https://urldefense.com/v3/__https://info.databricks.com/dc/iqoSFi8gRxN3bjGZEDn90EjHxqOFCR2NzPdiA0JFHdX0IdwPlwSu4ZUIkP-L8dy-S3IhJ8vFXu5rT4cyemtY8kUaEFQuX2p5XNG0zsfYbUPW2oy8syn06YHS3nsbeGmc/CMS00V0Kh0PY0CoP0U0rS0r__"
+# Get-OriginalUrlFromUrlDefense -Url "https://urldefense.com/v3/__https://github.com/steven__judd/sjUrlDefense__;!!J9_hdUX_JbjuLQ!_mpQgRsIaawOILsUWxCcr5y3kFNhQir7iT8vEvcJzL8J4OfrN2b3ichHNbkMj4c$"
 # Get-OriginalUrlFromUrlDefense -Url ""
 # Get-OriginalUrlFromUrlDefense "blah"

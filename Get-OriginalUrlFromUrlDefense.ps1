@@ -29,12 +29,14 @@ function Get-OriginalUrlFromUrlDefense {
         System.String
     .OUTPUTS
         System.String
+    .LINK
+        https://github.com/stevenjudd/sjUrlDefense/blob/advancedfunction/Get-OriginalUrlFromUrlDefense.ps1
     .NOTES
         Updated by Steven Judd on 2020/03/10 to:
             Add Help block
             Add sending a value to Url from the pipeline
             Set the Url parameter to an array
-            Added the begin,process,end blocks to properly handle pipeline input
+            Added the begin/process/end blocks to properly handle pipeline input
             Added the "urldefense.com" check to the Select-String RegEx and used capture groups to get just the URL
     #>
 
@@ -53,8 +55,10 @@ function Get-OriginalUrlFromUrlDefense {
         foreach ($item in $Url) {
             $UrlDefenseUrl = $item | Select-String "(urldefense\.com).*?(__.*__)"
             if ($UrlDefenseUrl) {
-                $UrlWithDelimiter = ($UrlDefenseUrl | Select-Object -ExpandProperty Matches | Select-Object -ExpandProperty Groups)[2].Value
-                #remove the delimiters at the beginning and end of the Url
+                $UrlWithDelimiter = ($UrlDefenseUrl.Matches.Groups)[2].Value
+                # This ^^^ is faster than using the pipeline:
+                # $UrlWithDelimiter = ($UrlDefenseUrl | Select-Object -ExpandProperty Matches | Select-Object -ExpandProperty Groups)[2].Value
+                # remove the delimiters at the beginning and end of the Url
                 if ($UrlWithDelimiter.Substring(0, 2) -eq "__") {
                     $UrlWithDelimiter = $UrlWithDelimiter.Substring(2)
                 }

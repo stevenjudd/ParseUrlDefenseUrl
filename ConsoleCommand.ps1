@@ -22,7 +22,7 @@ $url2 = "https://urldefense.com/v3/__https://github.com/steven__judd/sjUrlDefens
 $url2 | sls "__.*?__"
 # check the value
 ($url2 | sls "__.*?__" | select -ExpandProperty matches).value
-# oops. There is also a problem with the RegEx. Need to fix that first.
+# oops. There is a problem with the RegEx. Need to fix that first.
 ($url2 | sls "__.*__" | select -ExpandProperty matches).value
 # now for the replace (and failure...)
 # it removes all of the double-underscores, which will break the URL
@@ -33,6 +33,6 @@ $url2 | sls "__.*?__"
 ($url2 | sls "__.*__").matches.value.substring(2, ($url2 | sls "__.*__").matches.value.length - 4)
 # or 
 ($url2 | sls "__.*__" -OutVariable SearchResult | select -ExpandProperty matches).value.substring(2, ($SearchResult | select -ExpandProperty matches).length - 4)
-# or
+# or (if you are a single-line command cheater...)
 $SearchScope = $url2 | sls "__.*__" ; ($SearchScope | select -ExpandProperty matches).value.substring(2, ($SearchScope | select -ExpandProperty matches).length - 4)
 # The end

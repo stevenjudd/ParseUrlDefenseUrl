@@ -46,7 +46,7 @@ function Get-UrlDefenseUrl {
             Add Help block
             Add sending a value to Url from the pipeline
             Set the Url parameter to an array
-            Added the begin,process,end blocks to properly handle pipeline input
+            Added the begin/process/end blocks to properly handle pipeline input
             Added the "urldefense.com" check to the Select-String RegEx and used capture groups to get just the URL
         Updated by Steven Judd on 2020/03/15 to shorten the function name
     #>

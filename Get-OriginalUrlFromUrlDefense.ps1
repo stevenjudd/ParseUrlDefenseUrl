@@ -7,10 +7,10 @@ function Get-OriginalUrlFromUrlDefense {
         Defense link. This makes it easier to read the destination link and also to 
         potentially load and test the URL if desired.
     .EXAMPLE
-        Get-OriginalUrlFromUrlDefense -Url "https://urldefense.com/v3/__https://t.co/BrOGv72PZ7__;!!J9_hdUX_JbjuLQ!67QG1zGLFo7NvDdC5tW1T3DSGOZHBbnJqQqa9kG7cDf5rF24BRdLa-KeVFQrgss$"
+        Get-OriginalUrlFromUrlDefense -Url "https://urldefense.com/v3/__https://github.com/stevenjudd/sjUrlDefense__;!!J9_hdUX_JbjuLQ!_mpQgRsIaawOILsUWxCcr5y3kFNhQir7iT8vEvcJzL8J4OfrN2b3ichHNbkMj4c$"
         This command will return the imbedded URL from the specified value for the Url parameter.
     .EXAMPLE
-        $Url = "https://urldefense.com/v3/__https://t.co/BrOGv72PZ7__;!!J9_hdUX_JbjuLQ!67QG1zGLFo7NvDdC5tW1T3DSGOZHBbnJqQqa9kG7cDf5rF24BRdLa-KeVFQrgss$"
+        $Url = "https://urldefense.com/v3/__https://github.com/stevenjudd/sjUrlDefense__;!!J9_hdUX_JbjuLQ!_mpQgRsIaawOILsUWxCcr5y3kFNhQir7iT8vEvcJzL8J4OfrN2b3ichHNbkMj4c$"
         $Url | Get-OriginalUrlFromUrlDefense
         This command is setting the URL value to the $Url variable. This variable is 
         passed via the pipeline to the function and will return the imbedded URL.
@@ -73,8 +73,8 @@ function Get-OriginalUrlFromUrlDefense {
 
 # test cases:
 # Get-OriginalUrlFromUrlDefense
-# Get-OriginalUrlFromUrlDefense -Url "https://urldefense.com/v3/__https://t.co/BrOGv72PZ7__;!!J9_hdUX_JbjuLQ!67QG1zGLFo7NvDdC5tW1T3DSGOZHBbnJqQqa9kG7cDf5rF24BRdLa-KeVFQrgss$"
-# $Url = "https://urldefense.com/v3/__https://t.co/BrOGv72PZ7__;!!J9_hdUX_JbjuLQ!67QG1zGLFo7NvDdC5tW1T3DSGOZHBbnJqQqa9kG7cDf5rF24BRdLa-KeVFQrgss$"
+# Get-OriginalUrlFromUrlDefense -Url "https://urldefense.com/v3/__https://github.com/stevenjudd/sjUrlDefense__;!!J9_hdUX_JbjuLQ!_mpQgRsIaawOILsUWxCcr5y3kFNhQir7iT8vEvcJzL8J4OfrN2b3ichHNbkMj4c$"
+# $Url = "https://urldefense.com/v3/__https://github.com/stevenjudd/sjUrlDefense__;!!J9_hdUX_JbjuLQ!_mpQgRsIaawOILsUWxCcr5y3kFNhQir7iT8vEvcJzL8J4OfrN2b3ichHNbkMj4c$"
 # $Url | Get-OriginalUrlFromUrlDefense
 # Get-OriginalUrlFromUrlDefense -Url ""
 # Get-OriginalUrlFromUrlDefense "blah"

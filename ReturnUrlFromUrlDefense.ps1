@@ -16,6 +16,7 @@ if ($Url) {
 }
 
 # examples:
-# .\ReturnUrlFromUrlDefense.ps1 -Url "https://urldefense.com/v3/__https://github.com/steven__judd/sjUrlDefense__;!!J9_hdUX_JbjuLQ!_mpQgRsIaawOILsUWxCcr5y3kFNhQir7iT8vEvcJzL8J4OfrN2b3ichHNbkMj4c$"
+# .\ReturnUrlFromUrlDefense.ps1 -Url "https://urldefense.com/v3/__https://github.com/stevenjudd/sjUrlDefense__;!!J9_hdUX_JbjuLQ!_mpQgRsIaawOILsUWxCcr5y3kFNhQir7iT8vEvcJzL8J4OfrN2b3ichHNbkMj4c$"
 # .\ReturnUrlFromUrlDefense.ps1 -Url ""
 # .\ReturnUrlFromUrlDefense.ps1
+# wut? ^^^

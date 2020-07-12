@@ -23,7 +23,7 @@ function Get-OriginalUrlFromUrlDefense {
 } #end Get-sjUrlFromUrlDefense function
 
 # examples:
-# Get-OriginalUrlFromUrlDefense
 # Get-OriginalUrlFromUrlDefense -Url "https://urldefense.com/v3/__https://github.com/steven__judd/sjUrlDefense__;!!J9_hdUX_JbjuLQ!_mpQgRsIaawOILsUWxCcr5y3kFNhQir7iT8vEvcJzL8J4OfrN2b3ichHNbkMj4c$"
 # Get-OriginalUrlFromUrlDefense -Url ""
+# Get-OriginalUrlFromUrlDefense
 # Get-OriginalUrlFromUrlDefense "blah"

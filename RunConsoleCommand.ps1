@@ -1,5 +1,5 @@
 $content = Get-Content .\ConsoleCommand.ps1
-Clear-Host
+Clear-Host #please only use this cmdlet for demonstrations
 foreach ($line in $content) {
     Write-Host "$line"
     Write-Host ''

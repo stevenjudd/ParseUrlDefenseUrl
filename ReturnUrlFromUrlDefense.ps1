@@ -20,3 +20,4 @@ if ($Url) {
 # .\ReturnUrlFromUrlDefense.ps1 -Url ""
 # .\ReturnUrlFromUrlDefense.ps1
 # wut? ^^^
+# .\ReturnUrlFromUrlDefense.ps1 "blah"

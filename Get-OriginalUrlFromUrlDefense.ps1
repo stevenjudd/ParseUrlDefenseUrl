@@ -23,9 +23,9 @@ function Get-OriginalUrlFromUrlDefense {
 } #end Get-sjUrlFromUrlDefense function
 
 # examples:
-# Get-OriginalUrlFromUrlDefense -Url "https://urldefense.com/v3/__https://github.com/stevenjudd/sjUrlDefense__;!!J9_hdUX_JbjuLQ!_mpQgRsIaawOILsUWxCcr5y3kFNhQir7iT8vEvcJzL8J4OfrN2b3ichHNbkMj4c$"
-# Get-OriginalUrlFromUrlDefense -Url ""
+# Get-OriginalUrlFromUrlDefense -Url 'https://urldefense.com/v3/__https://github.com/stevenjudd/sjUrlDefense__;!!J9_hdUX_JbjuLQ!_mpQgRsIaawOILsUWxCcr5y3kFNhQir7iT8vEvcJzL8J4OfrN2b3ichHNbkMj4c$'
+# Get-OriginalUrlFromUrlDefense -Url ''
 # Get-OriginalUrlFromUrlDefense
-# Get-OriginalUrlFromUrlDefense "blah"
-# Set-Clipboard "https://urldefense.com/v3/__https://github.com/stevenjudd/sjUrlDefense__;!!J9_hdUX_JbjuLQ!_mpQgRsIaawOILsUWxCcr5y3kFNhQir7iT8vEvcJzL8J4OfrN2b3ichHNbkMj4c$"
+# Get-OriginalUrlFromUrlDefense 'blah'
+# Set-Clipboard 'https://urldefense.com/v3/__https://github.com/stevenjudd/sjUrlDefense__;!!J9_hdUX_JbjuLQ!_mpQgRsIaawOILsUWxCcr5y3kFNhQir7iT8vEvcJzL8J4OfrN2b3ichHNbkMj4c$'
 # Get-OriginalUrlFromUrlDefense -Url (Get-Clipboard)

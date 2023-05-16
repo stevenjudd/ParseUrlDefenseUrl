@@ -3,7 +3,7 @@ $url = 'https://urldefense.com/v3/__https://github.com/stevenjudd/sjUrlDefense__
 # making sure the URL is pulled from the variable using the double-underscore
 $url | sls '__.*?__'
 # check what is contained in the object returned by sls
-$url | sls '__.*?__' | gm -MemberType Property | select Name, MemberType, Definition | Format-Table
+$url | sls '__.*?__' | gm -MemberType Property | select Name, MemberType, Definition | ft
 # looking inside the Matches property
 $url | sls '__.*?__' | select matches
 # whoops. It is an object. Need to expand the object

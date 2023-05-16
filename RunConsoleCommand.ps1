@@ -15,6 +15,8 @@ foreach ($line in $content) {
     Invoke-Expression -Command $line | Out-Host
     Write-Host ('=' * $Host.UI.RawUI.WindowSize.Width)
     Write-Host ' '
+    Write-Host ' '
+    Start-Sleep -Seconds 2
     Wait-Debugger
     # $null = Read-Host 'Press Enter to continue'
     Clear-Host

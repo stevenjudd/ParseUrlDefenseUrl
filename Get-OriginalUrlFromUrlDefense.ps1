@@ -1,25 +1,24 @@
 function Get-OriginalUrlFromUrlDefense {
-    param (
-        [Parameter(Mandatory, Position = 0)]
-        [ValidateNotNullOrEmpty()]
-        [string]$Url
-    ) 
+  param (
+    [Parameter(Mandatory, Position = 0)]
+    [ValidateNotNullOrEmpty()]
+    [string]$Url
+  ) 
 
-    if ($Url) {
-        $UrlWithDelimiter = ($Url | Select-String "__.*__" -OutVariable SearchResult).Matches.Value
-        if ($UrlWithDelimiter) {
-            #remove the delimiters at the beginning and end of the Url
-            if ($UrlWithDelimiter.Substring(0, 2) -eq "__") {
-                $UrlWithDelimiter = $UrlWithDelimiter.Substring(2)
-            }
-            if ($UrlWithDelimiter.Substring($UrlWithDelimiter.Length - 2) -eq "__") {
-                ($UrlWithDelimiter).SubString(0, ($UrlWithDelimiter).Length - 2)
-            }
-        }
-        else {
-            Write-Error "Url value does not contain the proper double-underscore delimiters"
-        }
+  if ($Url) {
+    $UrlWithDelimiter = ($Url | Select-String '__.*__' -OutVariable SearchResult).Matches.Value
+    if ($UrlWithDelimiter) {
+      #remove the delimiters at the beginning and end of the Url
+      if ($UrlWithDelimiter.Substring(0, 2) -eq '__') {
+        $UrlWithDelimiter = $UrlWithDelimiter.Substring(2)
+      }
+      if ($UrlWithDelimiter.Substring($UrlWithDelimiter.Length - 2) -eq '__') {
+        ($UrlWithDelimiter).SubString(0, ($UrlWithDelimiter).Length - 2)
+      }
+    } else {
+      Write-Error 'Url value does not contain the proper double-underscore delimiters'
     }
+  }
 } #end Get-sjUrlFromUrlDefense function
 
 # examples:

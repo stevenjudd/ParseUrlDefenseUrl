@@ -5,7 +5,7 @@
 #get URL from clipboard
 $url = Get-Clipboard
 if (-not($url)) {
-    Write-Error "Nothing in the clipboard. Please copy the URL Defense string to parse into the clipboard before running the script."
-    return
+  Write-Error 'Nothing in the clipboard. Please copy the URL Defense string to parse into the clipboard before running the script.'
+  return
 }
-($url | Select-String "__.*__" -OutVariable SearchResult).Matches.Value.SubString(2, $SearchResult.Matches.Length - 4)
+($url | Select-String '__.*__' -OutVariable SearchResult).Matches.Value.SubString(2, $SearchResult.Matches.Length - 4)

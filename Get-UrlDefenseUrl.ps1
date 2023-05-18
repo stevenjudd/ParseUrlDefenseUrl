@@ -24,7 +24,7 @@ function Get-UrlDefenseUrl {
   .EXAMPLE
     Get-UrlDefenseUrl (Get-Clipboard)
     This command will run the function against whatever is in the clipboard. This is
-    useful if you use the "Copy Hyerlink" feature of Outlook to get the URL to test.
+    useful if you use the "Copy Hyperlink" feature of Outlook to get the URL to test.
 
     If you want to get fancy (of course you do) then you can run the following code
     to create a function to shortcut the above command plus a bit more:

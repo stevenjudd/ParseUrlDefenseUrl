@@ -24,7 +24,7 @@ function Get-OriginalUrlFromUrlDefense {
   .EXAMPLE
     Get-OriginalUrlFromUrlDefense Get-Clipboard
     This command will run the function against whatever is in the clipboard. This is
-    useful if you use the "Copy Hyerlink" feature of Outlook to get the URL to test.
+    useful if you use the "Copy Hyperlink" feature of Outlook to get the URL to test.
   .INPUTS
     System.String
   .OUTPUTS
